@@ -1,13 +1,14 @@
+package Massive;
+
 import java.util.Scanner;
 
-public class J {
+public class A {
     public static void main(String[] args) {
         Scanner read = new Scanner(System.in);
         int n = read.nextInt(), x = read.nextInt();
-        String ans = "true";
-        for(int i = 1; i < n; ++i){
-            ans = (x == read.nextInt()) ? ans : "false";
+        int[] arr = new int[n];
+        for (int i = 0; i < n; ++i){
+            arr[i] = x;
         }
-        System.out.println(ans);
     }
 }

@@ -3,15 +3,15 @@ package Massive;
 public class J {
     public static void main(String[] args) {
         int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}; // not copy!
-        int c = arr[arr.length - 1];
-        for (int i = arr.length - 1; i > 0; --i){
-            arr[i] = arr[i - 1];
+        int k = 1, c, b, n = arr.length;
+        c = arr[0];
+        for (int i = 1; i <= n; ++i) {
+            b = arr[(i * k) % n];
+            arr[(i * k) % n] = c;
+            c = b;
         }
-        arr[0] = c;
-        for (int x : arr){
-            System.out.print(x + " ");
+        for (int t : arr) {
+            System.out.print(t + " ");
         }
-        // решение работает за O(n)
-        // не существует более эффективного решения
     }
 }

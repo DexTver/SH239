@@ -15,9 +15,9 @@ public class B {
         System.out.println(rect2.getPerimeter());
         System.out.println(rect2.getArea());
 
-        Rect rect3 = rect1.devide(2.5, 2.5);
-        Rect rect4 = rect1.devide(0.25, 0.25);
-        Rect rect5 = rect2.devide(0.2, 0.5);
+        Rect rect3 = rect1.devide(2.5d, 2.5d);
+        Rect rect4 = rect1.getAFourth();
+        Rect rect5 = rect2.devide(0.2d, 0.5d);
 
         System.out.println(rect3.toString());
         System.out.println(rect4.toString());

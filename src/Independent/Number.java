@@ -1,3 +1,5 @@
+package Independent;
+
 public class Number {
     private int value;
 

@@ -1,3 +1,5 @@
+package Independent;
+
 public class Pupil extends Child implements Comparable<Pupil> {
     private int klass;
 

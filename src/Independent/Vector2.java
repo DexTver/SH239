@@ -1,3 +1,5 @@
+package Independent;
+
 public class Vector2 {
     private double x, y;
 
@@ -91,6 +93,38 @@ public class Vector2 {
         return new Vector2(this.x / len(), this.y / len());
     }
 
+    public void rotate(double ang) {
+        double x = this.x;
+        double y = this.y;
+        this.x = x * Math.cos(ang) - y * Math.sin(ang);
+        this.y = x * Math.sin(ang) + y * Math.cos(ang);
+    }
+
+    public Vector2 rotated(double ang) {
+        return new Vector2(x * Math.cos(ang) - y * Math.sin(ang), x * Math.sin(ang) + y * Math.cos(ang));
+    }
+
+    public Vector2 ort() {
+        Vector2 vector = norm();
+        vector.rotate(Math.PI / 2);
+        return vector;
+    }
+
+    public double phi() {
+        return Math.atan(y / x);
+    }
+
+    public int getQuarte() {
+        if (x > 0 && y > 0) return 1;
+        if (x < 0 && y > 0) return 2;
+        if (x < 0 && y < 0) return 3;
+        if (x > 0 && y < 0) return 4;
+        return 0;
+    }
+
+    public boolean equals(Vector2 o) {
+        return (this.x == o.getX() && this.y == o.getY());
+    }
 
     @Override
     public String toString() {

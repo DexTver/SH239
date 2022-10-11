@@ -111,7 +111,7 @@ public class Vector2 {
     }
 
     public double phi() {
-        return Math.atan(y / x);
+        return Math.atan2(x, y);
     }
 
     public int getQuarte() {
